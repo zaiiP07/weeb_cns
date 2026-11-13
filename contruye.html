@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Construye Aplicaciones Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="construye.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Aplicaciones Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="print.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contruye.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ambosVd.html">Resumen en video</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0 d-flex align-items-center">
+                        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar entre tema claro y oscuro">
+                            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                            <span id="themeLabel">Oscuro</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <span class="badge rounded-pill badge-soft px-3 py-2 mb-3">Hojas de Estilo en Cascada</span>
+            <h1><i class="bi bi-filetype-css"></i> CSS3</h1>
+            <p>El lenguaje de diseño que da color, tipografía, espaciado y adaptabilidad a los documentos HTML.</p>
+        </div>
+    </header>
+
+    <main class="container section-space">
+        <!-- Introducción -->
+        <section class="content-card mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-8">
+                    <h2 class="h3 fw-bold" style="color: var(--principal);">¿Qué es CSS?</h2>
+                    <p><strong>CSS</strong> significa <em>Cascading Style Sheets</em> (Hojas de Estilo en Cascada). Permite separar la estructura del contenido de su presentación visual.</p>
+                    <p class="mb-2">Existen tres formas de aplicar CSS a una página:</p>
+                    <ul class="mb-0">
+                        <li><strong>CSS Externo (Recomendado):</strong> Mediante un archivo independiente como <code>construye.css</code> enlazado con <code>&lt;link&gt;</code>.</li>
+                        <li><strong>CSS Interno:</strong> Dentro de la etiqueta <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code> del documento.</li>
+                        <li><strong>CSS en Línea:</strong> Directamente en el atributo <code>style=""</code> de una etiqueta HTML.</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="cssIM.png" class="content-img" alt="Imagen ilustrativa de CSS3">
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Propiedades CSS -->
+        <section class="content-card mb-5">
+            <h2 class="h3 fw-bold mb-3" style="color: var(--principal);"><i class="bi bi-table"></i> Tabla de propiedades CSS fundamentales</h2>
+            <p class="text-muted">Referencia rápida de propiedades utilizadas en el diseño de interfaces web:</p>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-custom align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Propiedad</th>
+                            <th>Descripción</th>
+                            <th>Valores de ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>color</code></td>
+                            <td>Cambia el color del texto de un elemento.</td>
+                            <td><code>#2c4a63</code>, <code>navy</code>, <code>rgb(44, 74, 99)</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>background-color</code></td>
+                            <td>Define el color de fondo de una caja o página.</td>
+                            <td><code>#f3f8f9</code>, <code>#e3f2ed</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>font-size</code></td>
+                            <td>Establece el tamaño de la tipografía.</td>
+                            <td><code>16px</code>, <code>1.15rem</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>margin</code></td>
+                            <td>Controla el espacio exterior alrededor del borde.</td>
+                            <td><code>20px</code>, <code>0 auto</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>padding</code></td>
+                            <td>Controla el espacio interior entre el contenido y el borde.</td>
+                            <td><code>15px 25px</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>border-radius</code></td>
+                            <td>Redondea las esquinas de tarjetas, botones e imágenes.</td>
+                            <td><code>12px</code>, <code>50%</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>display</code></td>
+                            <td>Define el comportamiento de distribución del contenedor.</td>
+                            <td><code>flex</code>, <code>grid</code>, <code>block</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Laboratorio Interactivo de CSS en Vivo -->
+        <section class="content-card mb-5">
+            <h2 class="h3 fw-bold mb-2" style="color: var(--principal);"><i class="bi bi-sliders"></i> Laboratorio CSS interactivo</h2>
+            <p class="text-muted mb-4">Modifica los controles para ver cómo cambian las propiedades CSS en tiempo real:</p>
+
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <div class="mb-3">
+                        <label for="cssBgSelect" class="form-label fw-semibold">Color de fondo (<code>background-color</code>):</label>
+                        <select id="cssBgSelect" class="form-select">
+                            <option value="#e8f1f8">Azul suave (#e8f1f8)</option>
+                            <option value="#e3f2ed">Verde menta suave (#e3f2ed)</option>
+                            <option value="#2c4a63">Azul pizarra oscuro (#2c4a63)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cssRadiusRange" class="form-label fw-semibold">Borde redondeado (<code>border-radius</code>): <span id="radiusVal">16px</span></label>
+                        <input type="range" class="form-range" id="cssRadiusRange" min="0" max="40" value="16">
+                    </div>
+                    <div class="mb-0">
+                        <label for="cssPaddingRange" class="form-label fw-semibold">Relleno interior (<code>padding</code>): <span id="paddingVal">24px</span></label>
+                        <input type="range" class="form-range" id="cssPaddingRange" min="10" max="45" value="24">
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div id="cajaPreviewCss" style="background-color: #e8f1f8; color: #243746; border-radius: 16px; padding: 24px; border: 2px solid #76b5a0; transition: all 0.2s ease;">
+                        <h4 class="fw-bold mb-2">Tarjeta de prueba CSS</h4>
+                        <p class="mb-0">Observa cómo cambian mi color de fondo, esquinas y espacio interior al mover los controles de la izquierda.</p>
+                    </div>
+                    <pre class="code-block mt-3 mb-0" id="codigoCssGenerado"><code>.tarjeta-prueba {
+    background-color: #e8f1f8;
+    border-radius: 16px;
+    padding: 24px;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+            <a href="print.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Anterior: HTML</a>
+            <a href="index.html" class="btn btn-primary"><i class="bi bi-house"></i> Volver al inicio</a>
+            <a href="ambosVd.html" class="btn btn-soft-green">Siguiente: Video <i class="bi bi-play-circle"></i></a>
+        </div>
+    </main>
+
+    <footer><p>Proyecto escolar: Construye Aplicaciones Web • Sección CSS3</p></footer>
+
+    
+    <!-- Botón y Ventana de Chat Interactivo -->
+    <button class="chat-toggle-btn" id="chatToggle" aria-label="Abrir chat de ayuda">
+        <i class="bi bi-chat-dots-fill fs-5"></i>
+        <span>Asistente Web</span>
+    </button>
+
+    <div class="chat-window" id="chatWindow" role="dialog" aria-label="Chat de ayuda sobre HTML y CSS">
+        <div class="chat-header">
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-robot fs-5"></i>
+                <div>
+                    <strong class="d-block" style="font-size: 0.95rem;">Tutor HTML &amp; CSS</strong>
+                    <small style="font-size: 0.75rem; opacity: 0.85;">En línea • Responde tus dudas</small>
+                </div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" id="chatClose" aria-label="Cerrar chat"></button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-msg bot">
+                ¡Hola! 👋 Soy tu asistente de <strong>Construye Aplicaciones Web</strong>. Pregúntame sobre etiquetas HTML, propiedades CSS, tablas o Bootstrap.
+            </div>
+        </div>
+        <div class="chat-suggestions">
+            <button type="button" class="chat-chip" data-q="¿Qué es HTML?">¿Qué es HTML?</button>
+            <button type="button" class="chat-chip" data-q="¿Qué es CSS?">¿Qué es CSS?</button>
+            <button type="button" class="chat-chip" data-q="Diferencia HTML y CSS">HTML vs CSS</button>
+            <button type="button" class="chat-chip" data-q="¿Para qué sirve Bootstrap?">Bootstrap</button>
+        </div>
+        <form class="chat-footer" id="chatForm">
+            <input type="text" class="form-control form-control-sm" id="chatInput" placeholder="Escribe tu duda..." autocomplete="off" required>
+            <button type="submit" class="btn btn-primary btn-sm" aria-label="Enviar mensaje"><i class="bi bi-send"></i></button>
+        </form>
+    </div>
+
+    <script>
+        (function () {
+            const chatToggle = document.getElementById('chatToggle');
+            const chatWindow = document.getElementById('chatWindow');
+            const chatClose = document.getElementById('chatClose');
+            const chatForm = document.getElementById('chatForm');
+            const chatInput = document.getElementById('chatInput');
+            const chatBody = document.getElementById('chatBody');
+            const chips = document.querySelectorAll('.chat-chip');
+
+            if (!chatToggle || !chatWindow) return;
+
+            chatToggle.addEventListener('click', () => {
+                chatWindow.classList.toggle('open');
+                if (chatWindow.classList.contains('open')) chatInput.focus();
+            });
+
+            chatClose.addEventListener('click', () => {
+                chatWindow.classList.remove('open');
+            });
+
+            function getBotReply(text) {
+                const q = text.toLowerCase();
+                if (q.includes('html')) {
+                    return '<strong>HTML</strong> (HyperText Markup Language) construye el esqueleto y contenido de la web usando etiquetas como &lt;h1&gt;, &lt;p&gt;, &lt;table&gt;, &lt;ul&gt; y &lt;form&gt;.';
+                }
+                if (q.includes('css')) {
+                    return '<strong>CSS</strong> (Cascading Style Sheets) diseña la apariencia visual: colores, fuentes, márgenes, bordes, Flexbox y diseño adaptable.';
+                }
+                if (q.includes('diferencia') || q.includes('vs')) {
+                    return 'En resumen: <strong>HTML construye</strong> la estructura y el contenido, mientras que <strong>CSS diseña</strong> cómo se ve todo en pantalla.';
+                }
+                if (q.includes('bootstrap')) {
+                    return '<strong>Bootstrap 5</strong> es un framework CSS/JS que facilita crear diseños responsivos con su sistema de rejilla (grid), tarjetas, tablas, modales y acordeones.';
+                }
+                if (q.includes('tabla')) {
+                    return 'Para crear tablas en HTML usa <code>&lt;table&gt;</code>, filas con <code>&lt;tr&gt;</code>, encabezados con <code>&lt;th&gt;</code> y celdas con <code>&lt;td&gt;</code>.';
+                }
+                if (q.includes('lista')) {
+                    return 'Usa <code>&lt;ul&gt;</code> para listas con viñetas (desordenadas), <code>&lt;ol&gt;</code> para listas numeradas (ordenadas) y <code>&lt;li&gt;</code> para cada elemento.';
+                }
+                if (q.includes('video')) {
+                    return 'Puedes ver el resumen audiovisual <strong>expHC.mp4</strong> en la sección de Video de Inicio o en la página <em>Resumen en video</em>.';
+                }
+                return '¡Buena pregunta! Te recomiendo revisar las tarjetas, ejemplos de código y tablas interactivas de esta página, o preguntarme sobre <strong>HTML</strong>, <strong>CSS</strong>, <strong>tablas</strong>, <strong>listas</strong> o <strong>Bootstrap</strong>.';
+            }
+
+            function appendMessage(text, sender) {
+                const div = document.createElement('div');
+                div.className = 'chat-msg ' + sender;
+                div.innerHTML = text;
+                chatBody.appendChild(div);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            function sendQuery(query) {
+                if (!query.trim()) return;
+                appendMessage(query.replace(/</g, '&lt;').replace(/>/g, '&gt;'), 'user');
+                setTimeout(() => {
+                    appendMessage(getBotReply(query), 'bot');
+                }, 300);
+            }
+
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const val = chatInput.value;
+                chatInput.value = '';
+                sendQuery(val);
+            });
+
+            chips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    sendQuery(chip.getAttribute('data-q'));
+                });
+            });
+        })();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const bgSelect = document.getElementById('cssBgSelect');
+        const radiusRange = document.getElementById('cssRadiusRange');
+        const paddingRange = document.getElementById('cssPaddingRange');
+        const previewBox = document.getElementById('cajaPreviewCss');
+        const codeBlock = document.getElementById('codigoCssGenerado');
+
+        function actualizarCssDemo() {
+            const bg = bgSelect.value;
+            const radius = radiusRange.value + 'px';
+            const pad = paddingRange.value + 'px';
+            const textColor = bg === '#2c4a63' ? '#ffffff' : '#243746';
+
+            document.getElementById('radiusVal').textContent = radius;
+            document.getElementById('paddingVal').textContent = pad;
+
+            previewBox.style.backgroundColor = bg;
+            previewBox.style.color = textColor;
+            previewBox.style.borderRadius = radius;
+            previewBox.style.padding = pad;
+
+            codeBlock.innerHTML = `<code>.tarjeta-prueba {\n    background-color: ${bg};\n    color: ${textColor};\n    border-radius: ${radius};\n    padding: ${pad};\n}</code>`;
+        }
+
+        bgSelect?.addEventListener('change', actualizarCssDemo);
+        radiusRange?.addEventListener('input', actualizarCssDemo);
+        paddingRange?.addEventListener('input', actualizarCssDemo);
+    </script>
+
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const btn = document.getElementById('themeToggleBtn');
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    root.setAttribute('data-theme', 'dark');
+                    if (icon) icon.className = 'bi bi-sun-fill text-warning';
+                    if (label) label.textContent = 'Claro';
+                } else {
+                    root.removeAttribute('data-theme');
+                    if (icon) icon.className = 'bi bi-moon-stars-fill';
+                    if (label) label.textContent = 'Oscuro';
+                }
+            }
+
+            const savedTheme = localStorage.getItem('webAppTheme') || 'light';
+            applyTheme(savedTheme);
+
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    localStorage.setItem('webAppTheme', next);
+                    applyTheme(next);
+                });
+            }
+        })();
+    </script>
+
+</body>
+</html>

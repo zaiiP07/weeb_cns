@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | Construye Aplicaciones Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="construye.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-code-slash"></i> Aplicaciones Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="print.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contruye.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ambosVd.html">Resumen en video</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0 d-flex align-items-center">
+                        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar entre tema claro y oscuro">
+                            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                            <span id="themeLabel">Oscuro</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <span class="badge rounded-pill badge-soft px-3 py-2 mb-3">Lenguaje de Marcado</span>
+            <h1><i class="bi bi-filetype-html"></i> HTML5</h1>
+            <p>El lenguaje estándar que permite estructurar y dar significado semántico al contenido de las páginas web.</p>
+        </div>
+    </header>
+
+    <main class="container section-space">
+        <!-- Introducción -->
+        <section class="content-card mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-8">
+                    <h2 class="h3 fw-bold" style="color: var(--principal);">¿Qué es HTML?</h2>
+                    <p><strong>HTML</strong> significa <em>HyperText Markup Language</em> (Lenguaje de Marcado de Hipertexto). No es un lenguaje de programación, sino un lenguaje de estructura que indica al navegador qué representa cada bloque de información mediante <strong>etiquetas</strong>.</p>
+                    <p class="mb-0">Con la llegada de <strong>HTML5</strong>, se incorporaron etiquetas semánticas (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>) y soporte nativo para audio y video sin complementos externos.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="htmIm.png" class="content-img" alt="Imagen ilustrativa de HTML5">
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Etiquetas HTML -->
+        <section class="content-card mb-5">
+            <h2 class="h3 fw-bold mb-3" style="color: var(--principal);"><i class="bi bi-table"></i> Tabla de etiquetas HTML esenciales</h2>
+            <p class="text-muted">Consulta las etiquetas más utilizadas agrupadas por categoría y ejemplo de sintaxis:</p>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-custom align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Etiqueta</th>
+                            <th>Categoría</th>
+                            <th>Función</th>
+                            <th>Ejemplo de uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;h1&gt; ... &lt;h6&gt;</code></td>
+                            <td>Texto</td>
+                            <td>Define encabezados jerárquicos (siendo <code>&lt;h1&gt;</code> el principal).</td>
+                            <td><code>&lt;h1&gt;Título principal&lt;/h1&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;p&gt;</code></td>
+                            <td>Texto</td>
+                            <td>Crea un párrafo de texto estándar.</td>
+                            <td><code>&lt;p&gt;Bienvenido a mi sitio.&lt;/p&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;a&gt;</code></td>
+                            <td>Navegación</td>
+                            <td>Inserta un hipervínculo hacia otra página o sección.</td>
+                            <td><code>&lt;a href="contruye.html"&gt;Ir a CSS&lt;/a&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;img&gt;</code></td>
+                            <td>Multimedia</td>
+                            <td>Muestra una imagen (etiqueta de autocierre).</td>
+                            <td><code>&lt;img src="htmIm.png" alt="Logo"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;ul&gt; / &lt;ol&gt;</code></td>
+                            <td>Listas</td>
+                            <td>Crea listas desordenadas (viñetas) u ordenadas (números).</td>
+                            <td><code>&lt;ul&gt;&lt;li&gt;Elemento&lt;/li&gt;&lt;/ul&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;table&gt;</code></td>
+                            <td>Datos</td>
+                            <td>Organiza información en filas (<code>&lt;tr&gt;</code>) y celdas (<code>&lt;td&gt;</code>).</td>
+                            <td><code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Dato&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;form&gt;</code></td>
+                            <td>Interacción</td>
+                            <td>Agrupa controles de entrada como <code>&lt;input&gt;</code> y <code>&lt;button&gt;</code>.</td>
+                            <td><code>&lt;form&gt;&lt;input type="text"&gt;&lt;/form&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Pestañas Interactivas Bootstrap: Ejemplos de Listas, Tablas y Estructura -->
+        <section class="content-card mb-5">
+            <h2 class="h3 fw-bold mb-3" style="color: var(--principal);"><i class="bi bi-code-square"></i> Ejemplos prácticos interactivos</h2>
+            <p class="text-muted">Selecciona una pestaña para explorar el código y su resultado visual:</p>
+
+            <ul class="nav nav-pills mb-4" id="pills-html-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="tab-estructura-btn" data-bs-toggle="pill" data-bs-target="#tab-estructura" type="button" role="tab">1. Estructura Base</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-listas-btn" data-bs-toggle="pill" data-bs-target="#tab-listas" type="button" role="tab">2. Listas HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab-tablas-btn" data-bs-toggle="pill" data-bs-target="#tab-tablas" type="button" role="tab">3. Tablas HTML</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="pills-html-tabContent">
+                <!-- Tab 1 -->
+                <div class="tab-pane fade show active" id="tab-estructura" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h3 class="h5 fw-bold">Código HTML5</h3>
+                            <pre class="code-block mb-0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi primera web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;&lt;h1&gt;Hola mundo&lt;/h1&gt;&lt;/header&gt;
+    &lt;main&gt;&lt;p&gt;Contenido principal.&lt;/p&gt;&lt;/main&gt;
+    &lt;footer&gt;&lt;small&gt;Pie de página&lt;/small&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 fw-bold">Explicación de partes</h3>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>&lt;!DOCTYPE html&gt;:</strong> Indica al navegador que use el estándar HTML5.</li>
+                                <li class="list-group-item"><strong>&lt;head&gt;:</strong> Contiene metadatos, título de pestaña y enlaces a CSS.</li>
+                                <li class="list-group-item"><strong>&lt;body&gt;:</strong> Contiene todo lo que el usuario ve en pantalla.</li>
+                                <li class="list-group-item"><strong>Semántica:</strong> Etiquetas como <code>&lt;main&gt;</code> mejoran la accesibilidad y el SEO.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2 -->
+                <div class="tab-pane fade" id="tab-listas" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h3 class="h5 fw-bold">Código de Listas</h3>
+                            <pre class="code-block mb-0"><code>&lt;!-- Lista desordenada --&gt;
+&lt;ul&gt;
+    &lt;li&gt;HTML5&lt;/li&gt;
+    &lt;li&gt;CSS3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Lista ordenada --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Abrir editor&lt;/li&gt;
+    &lt;li&gt;Guardar como .html&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 fw-bold">Vista previa en navegador</h3>
+                            <div class="p-3 rounded-3 border bg-light">
+                                <p class="fw-bold mb-1">Lista con viñetas (&lt;ul&gt;):</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                </ul>
+                                <p class="fw-bold mb-1">Lista numerada (&lt;ol&gt;):</p>
+                                <ol class="mb-0">
+                                    <li>Abrir editor</li>
+                                    <li>Guardar como .html</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3 -->
+                <div class="tab-pane fade" id="tab-tablas" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h3 class="h5 fw-bold">Código de Tabla</h3>
+                            <pre class="code-block mb-0"><code>&lt;table class="table"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Etiqueta&lt;/th&gt;&lt;th&gt;Significado&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;&amp;lt;tr&amp;gt;&lt;/td&gt;&lt;td&gt;Fila de tabla&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&amp;lt;td&amp;gt;&lt;/td&gt;&lt;td&gt;Celda de dato&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h5 fw-bold">Vista previa en navegador</h3>
+                            <table class="table table-bordered table-custom mb-0">
+                                <thead>
+                                    <tr><th>Etiqueta</th><th>Significado</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>&lt;tr&gt;</code></td><td>Fila de tabla (Table Row)</td></tr>
+                                    <tr><td><code>&lt;td&gt;</code></td><td>Celda de dato (Table Data)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+            <a href="index.html" class="btn btn-outline-primary"><i class="bi bi-house"></i> Volver al inicio</a>
+            <a href="contruye.html" class="btn btn-primary">Siguiente: Guía CSS <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </main>
+
+    <footer><p>Proyecto escolar: Construye Aplicaciones Web • Sección HTML5</p></footer>
+
+    
+    <!-- Botón y Ventana de Chat Interactivo -->
+    <button class="chat-toggle-btn" id="chatToggle" aria-label="Abrir chat de ayuda">
+        <i class="bi bi-chat-dots-fill fs-5"></i>
+        <span>Asistente Web</span>
+    </button>
+
+    <div class="chat-window" id="chatWindow" role="dialog" aria-label="Chat de ayuda sobre HTML y CSS">
+        <div class="chat-header">
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-robot fs-5"></i>
+                <div>
+                    <strong class="d-block" style="font-size: 0.95rem;">Tutor HTML &amp; CSS</strong>
+                    <small style="font-size: 0.75rem; opacity: 0.85;">En línea • Responde tus dudas</small>
+                </div>
+            </div>
+            <button type="button" class="btn-close btn-close-white" id="chatClose" aria-label="Cerrar chat"></button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-msg bot">
+                ¡Hola! 👋 Soy tu asistente de <strong>Construye Aplicaciones Web</strong>. Pregúntame sobre etiquetas HTML, propiedades CSS, tablas o Bootstrap.
+            </div>
+        </div>
+        <div class="chat-suggestions">
+            <button type="button" class="chat-chip" data-q="¿Qué es HTML?">¿Qué es HTML?</button>
+            <button type="button" class="chat-chip" data-q="¿Qué es CSS?">¿Qué es CSS?</button>
+            <button type="button" class="chat-chip" data-q="Diferencia HTML y CSS">HTML vs CSS</button>
+            <button type="button" class="chat-chip" data-q="¿Para qué sirve Bootstrap?">Bootstrap</button>
+        </div>
+        <form class="chat-footer" id="chatForm">
+            <input type="text" class="form-control form-control-sm" id="chatInput" placeholder="Escribe tu duda..." autocomplete="off" required>
+            <button type="submit" class="btn btn-primary btn-sm" aria-label="Enviar mensaje"><i class="bi bi-send"></i></button>
+        </form>
+    </div>
+
+    <script>
+        (function () {
+            const chatToggle = document.getElementById('chatToggle');
+            const chatWindow = document.getElementById('chatWindow');
+            const chatClose = document.getElementById('chatClose');
+            const chatForm = document.getElementById('chatForm');
+            const chatInput = document.getElementById('chatInput');
+            const chatBody = document.getElementById('chatBody');
+            const chips = document.querySelectorAll('.chat-chip');
+
+            if (!chatToggle || !chatWindow) return;
+
+            chatToggle.addEventListener('click', () => {
+                chatWindow.classList.toggle('open');
+                if (chatWindow.classList.contains('open')) chatInput.focus();
+            });
+
+            chatClose.addEventListener('click', () => {
+                chatWindow.classList.remove('open');
+            });
+
+            function getBotReply(text) {
+                const q = text.toLowerCase();
+                if (q.includes('html')) {
+                    return '<strong>HTML</strong> (HyperText Markup Language) construye el esqueleto y contenido de la web usando etiquetas como &lt;h1&gt;, &lt;p&gt;, &lt;table&gt;, &lt;ul&gt; y &lt;form&gt;.';
+                }
+                if (q.includes('css')) {
+                    return '<strong>CSS</strong> (Cascading Style Sheets) diseña la apariencia visual: colores, fuentes, márgenes, bordes, Flexbox y diseño adaptable.';
+                }
+                if (q.includes('diferencia') || q.includes('vs')) {
+                    return 'En resumen: <strong>HTML construye</strong> la estructura y el contenido, mientras que <strong>CSS diseña</strong> cómo se ve todo en pantalla.';
+                }
+                if (q.includes('bootstrap')) {
+                    return '<strong>Bootstrap 5</strong> es un framework CSS/JS que facilita crear diseños responsivos con su sistema de rejilla (grid), tarjetas, tablas, modales y acordeones.';
+                }
+                if (q.includes('tabla')) {
+                    return 'Para crear tablas en HTML usa <code>&lt;table&gt;</code>, filas con <code>&lt;tr&gt;</code>, encabezados con <code>&lt;th&gt;</code> y celdas con <code>&lt;td&gt;</code>.';
+                }
+                if (q.includes('lista')) {
+                    return 'Usa <code>&lt;ul&gt;</code> para listas con viñetas (desordenadas), <code>&lt;ol&gt;</code> para listas numeradas (ordenadas) y <code>&lt;li&gt;</code> para cada elemento.';
+                }
+                if (q.includes('video')) {
+                    return 'Puedes ver el resumen audiovisual <strong>expHC.mp4</strong> en la sección de Video de Inicio o en la página <em>Resumen en video</em>.';
+                }
+                return '¡Buena pregunta! Te recomiendo revisar las tarjetas, ejemplos de código y tablas interactivas de esta página, o preguntarme sobre <strong>HTML</strong>, <strong>CSS</strong>, <strong>tablas</strong>, <strong>listas</strong> o <strong>Bootstrap</strong>.';
+            }
+
+            function appendMessage(text, sender) {
+                const div = document.createElement('div');
+                div.className = 'chat-msg ' + sender;
+                div.innerHTML = text;
+                chatBody.appendChild(div);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            function sendQuery(query) {
+                if (!query.trim()) return;
+                appendMessage(query.replace(/</g, '&lt;').replace(/>/g, '&gt;'), 'user');
+                setTimeout(() => {
+                    appendMessage(getBotReply(query), 'bot');
+                }, 300);
+            }
+
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const val = chatInput.value;
+                chatInput.value = '';
+                sendQuery(val);
+            });
+
+            chips.forEach(chip => {
+                chip.addEventListener('click', () => {
+                    sendQuery(chip.getAttribute('data-q'));
+                });
+            });
+        })();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const btn = document.getElementById('themeToggleBtn');
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    root.setAttribute('data-theme', 'dark');
+                    if (icon) icon.className = 'bi bi-sun-fill text-warning';
+                    if (label) label.textContent = 'Claro';
+                } else {
+                    root.removeAttribute('data-theme');
+                    if (icon) icon.className = 'bi bi-moon-stars-fill';
+                    if (label) label.textContent = 'Oscuro';
+                }
+            }
+
+            const savedTheme = localStorage.getItem('webAppTheme') || 'light';
+            applyTheme(savedTheme);
+
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    localStorage.setItem('webAppTheme', next);
+                    applyTheme(next);
+                });
+            }
+        })();
+    </script>
+
+</body>
+</html>
